@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import Servicios from "../components/sections/Servicios.astro";
+import Testimonios from "../components/sections/Testimonios.astro"
 ---
 
 <Layout>
-  <div class="bg-slate-100 text-center p-10">
-    <h1 class="text-4xl font-bold text-indigo-600">Bienvenido a SatChit</h1>
-    <p class="mt-4 text-gray-600">Tu espacio de equilibrio y bienestar</p>
-  </div>
+  <Hero/>
+  <Servicios/>
+  <Testimonios/>
 </Layout>

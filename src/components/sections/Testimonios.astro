@@ -1,0 +1,40 @@
+---
+import TestimonioCard from "../TestimonioCard.astro";
+import { testimonios } from "../../data/testimonios.js";
+const duplicados = [...testimonios, ...testimonios];
+---
+
+<section class="py-16 bg-white overflow-hidden">
+  <h2 class="text-2xl font-semibold text-center text-slate-800 mb-8">
+    Testimonios
+  </h2>
+
+  <div class="relative w-full group">    
+    <div
+      class="flex gap-6 w-max animate-scroll-loop whitespace-nowrap
+             md:scroll-auto md:overflow-visible
+             scroll-snap-x snap-mandatory overflow-x-auto px-4"
+    >
+      {duplicados.map((t) => (
+        <TestimonioCard nombre={t.nombre} texto={t.texto} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes scroll-loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (min-width: 768px) {
+    .animate-scroll-loop {
+      animation: scroll-loop 45s linear infinite;
+    }
+
+    .group:hover .animate-scroll-loop {
+      animation-play-state: paused;
+    }
+  }
+</style>

@@ -1,0 +1,15 @@
+---
+export interface Props {
+  nombre: string;
+  texto: string;
+}
+
+const { nombre, texto } = Astro.props;
+---
+
+<div
+  class="min-w-60 max-w-xs flex-shrink-0 bg-cyan-50 p-6 rounded-xl shadow text-center snap-center whitespace-normal"
+>
+  <h3 class="text-lg font-bold mb-2 text-cyan-800">{nombre}</h3>
+  <p class="text-gray-600 text-sm">{texto}</p>
+</div>
