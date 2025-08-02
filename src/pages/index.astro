@@ -1,12 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/sections/Hero.astro";
-import Servicios from "../components/sections/Servicios.astro";
-import Testimonios from "../components/sections/Testimonios.astro"
+import Hero from "../components/sections/index/Hero.astro";
+import Testimonios from "../components/sections/index/Testimonios.astro";
+import Bienvenida from "../components/sections/index/Bienvenida.astro";
+import Terapias from "../components/sections/index/Terapias.astro";
+import ServiciosExteriores from "../components/sections/index/ServiciosExteriores.astro";
 ---
 
 <Layout>
-  <Hero/>
-  <Servicios/>
-  <Testimonios/>
+  <Hero />
+  <Bienvenida />
+  <Terapias />
+  <ServiciosExteriores />
+  <Testimonios />
 </Layout>

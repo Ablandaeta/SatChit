@@ -1,0 +1,35 @@
+---
+export interface Props {
+  titulo: string;
+  descripcion: string;
+  icono?: string;
+  color?: "cyan" | "violet" | "blue";
+}
+
+const { titulo, descripcion, icono, color = 'cyan' } = Astro.props;
+
+const baseColor = {
+  cyan: {
+    bg: 'bg-cyan-50',
+    title: 'text-cyan-700',
+  },
+  violet: {
+    bg: 'bg-violet-50',
+    title: 'text-violet-500',
+  },
+  blue: {
+    bg: 'bg-blue-50',
+    title: 'text-blue-900',
+  },
+}[color];
+---
+
+<div class={`flex items-start gap-4 p-6 rounded-xl shadow ${baseColor.bg}`}>
+  {icono && (
+    <img src={icono} alt={titulo} class="w-10 h-10 flex-shrink-0" />
+  )}
+  <div>
+    <h3 class={`text-lg font-bold mb-1 ${baseColor.title}`}>{titulo}</h3>
+    <p class="text-gray-700 text-sm">{descripcion}</p>
+  </div>
+</div>

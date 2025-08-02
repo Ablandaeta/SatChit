@@ -1,0 +1,44 @@
+---
+import TerapiaCard from "../../ui/TerapiaCard.astro";
+import type { Props as TerapiaCardProps } from "../../ui/TerapiaCard.astro";
+
+const terapias: TerapiaCardProps[] = [
+  {
+    titulo: "Acupuntura",
+    descripcion:
+      "Técnica milenaria para aliviar el dolor, equilibrar la energía y promover la sanación profunda.",
+    // icono: "/icons/needle.svg",
+    color: "blue",
+  },
+  {
+    titulo: "Masajes terapéuticos",
+    descripcion:
+      "Técnicas manuales para liberar tensiones físicas y emocionales, mejorar la circulación y el descanso.",
+    // icono: "/icons/massage.svg",
+    color: "cyan",
+  },
+  {
+    titulo: "Meditaciones terapéuticas",
+    descripcion:
+      "Prácticas guiadas online para reducir el estrés y reconectar con tu bienestar desde la atención plena.",
+    //icono: "/icons/meditation.svg",
+    color: "violet",
+  },
+  {
+    titulo: "Consultas online",
+    descripcion:
+      "Evaluación individual, acompañamiento terapéutico y recomendaciones personalizadas desde casa.",
+    //icono: "/icons/online.svg",
+    color: "blue",
+  },
+];
+---
+
+<section class="py-16 bg-white">
+  <h2 class="text-2xl font-semibold text-center text-slate-800 mb-8">
+    Terapias destacadas
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto px-4">
+    {terapias.map((t) => <TerapiaCard {...t} />)}
+  </div>
+</section>

@@ -1,0 +1,37 @@
+---
+import TerapiaCard from "../../ui/TerapiaCard.astro";
+import type { Props as TerapiaCardProps } from "../../ui/TerapiaCard.astro";
+
+const servicios: TerapiaCardProps[] = [
+  {
+    titulo: "Acupuntura revitalizante",
+    descripcion:
+      "Sesiones en hoteles o eventos para liberar tensiones, mejorar el descanso y recuperar energía.",
+    //icono: "/icons/needle.svg",
+    color: "blue",
+  },
+  {
+    titulo: "Masajes relajantes a domicilio",
+    descripcion:
+      "Técnicas suaves en tu espacio para calmar el sistema nervioso y aliviar el estrés cotidiano.",
+    //icono: "/icons/massage.svg",
+    color: "cyan",
+  },
+  {
+    titulo: "Estética facial natural",
+    descripcion:
+      "Tratamientos holísticos faciales para cuidar tu piel desde el equilibrio energético y emocional.",
+    //icono: "/icons/skin-care.svg",
+    color: "violet",
+  },
+];
+---
+
+<section class="py-16 bg-white">
+  <h2 class="text-2xl font-semibold text-center text-slate-800 mb-8">
+    Servicios para centros & eventos
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto px-4">
+    {servicios.map((s) => <TerapiaCard {...s} />)}
+  </div>
+</section>

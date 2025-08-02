@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Introduccion from "../components/sections/about-us/Introduccion.astro";
+import QuienSoy from "../components/sections/about-us/QuienSoy.astro";
+import SatChit from "../components/sections/about-us/SAT-CHIT.astro";
+import ComoTrabajo from "../components/sections/about-us/ComoTrabajo.astro";
+import Button from "../components/ui/Button.astro";
+---
+
+<Layout>
+  <div class="py-16">
+    <SatChit />
+    <Introduccion />
+    <QuienSoy />
+    <ComoTrabajo />
+    <div class="text-center">
+      <Button href="/contacto" label="Agendar una cita" color="violet" />
+    </div>
+  </div>
+</Layout>

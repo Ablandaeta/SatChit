@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TratamientoDetalle from "../components/ui/TratamientoDetalle.astro";
+import Button from "../components/ui/Button.astro";
+---
+
+<Layout>
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto text-center px-6 mb-12">
+      <h1 class="text-3xl font-bold text-slate-800 mb-4">
+        Tratamientos personalizados
+      </h1>
+      <p class="text-gray-600 text-base leading-relaxed">
+        Conoce en profundidad cada uno de los tratamientos que ofrecemos, su
+        propósito, beneficios y cómo pueden ayudarte a mejorar tu bienestar
+        físico, emocional y energético.
+      </p>
+    </div>
+
+    <TratamientoDetalle
+      titulo="Acupuntura"
+      descripcion="Terapia ancestral de la Medicina Tradicional China que utiliza agujas muy finas en puntos específicos del cuerpo para equilibrar la energía vital (Qi)."
+      beneficios={[
+        "Alivia el dolor crónico",
+        "Reduce el estrés y la ansiedad",
+        "Mejora el sueño y la digestión",
+      ]}
+      color="blue"
+    />
+
+    <TratamientoDetalle
+      titulo="Masajes terapéuticos"
+      descripcion="Masajes personalizados para relajar, descontracturar y restaurar el flujo energético corporal, ayudando a liberar tensiones físicas y emocionales."
+      beneficios={[
+        "Disminuye contracturas",
+        "Mejora la circulación",
+        "Aumenta sensación de bienestar",
+      ]}
+      color="cyan"
+    />
+
+    <TratamientoDetalle
+      titulo="Meditación terapéutica"
+      descripcion="Prácticas guiadas para reconectar con la calma interior, cultivar la atención plena y reducir el malestar emocional desde la conciencia corporal."
+      beneficios={[
+        "Reduce el estrés y la rumiación mental",
+        "Mejora el enfoque y la claridad",
+        "Fortalece la conexión cuerpo-mente",
+      ]}
+      color="violet"
+    />
+    <div class="text-center">
+      <Button href="/contacto" label="Agendar una cita" color="violet" />
+    </div>
+  </section>
+</Layout>
